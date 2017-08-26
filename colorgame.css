@@ -1,10 +1,16 @@
 body {
   background-color: #232323;
+  margin: 0;
+  font-family: "Montserrat", "Avenir";
 }
 
 h1{
   text-align: center;
   color: white;
+  background-color: steelblue;
+  margin: 0;
+  font-weight: normal;
+  text-transform: uppercase;
 }
 
 #midMenu{
@@ -13,6 +19,9 @@ h1{
 
 }
 
+#colorDisplay {
+  font-size: 200%;
+}
 .square {
   width: 30%;
   background: purple;

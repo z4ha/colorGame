@@ -38,7 +38,7 @@ function reseter () {
     }
   }
 
-  topMenu.style.backgroundColor = '#232323'
+  topMenu.style.backgroundColor = 'steelblue'
   resetButton.textContent = 'New Colors'
   messageDisplay.textContent = ''
 }
