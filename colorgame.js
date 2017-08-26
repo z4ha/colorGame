@@ -14,24 +14,34 @@ easyButton.addEventListener('click', function () {
   this.classList.add('selected');
   hardButton.classList.remove('selected');
   nbrOfSquares = 3
+  reseter()
 })
 
 hardButton.addEventListener('click', function () {
   this.classList.add('selected');
   easyButton.classList.remove('selected');
   nbrOfSquares = 6
+  reseter()
 })
 
-resetButton.addEventListener('click', function () {
+resetButton.addEventListener('click', reseter)
+
+function reseter () {
   colors = generateRandomColors(nbrOfSquares)
   pickedColor = pickColor()
   for (var i = 0; i < squares.length; i++) {
-    squares[i].style.backgroundColor = colors[i]
+    if(colors[i]){
+      squares[i].style.backgroundColor = colors[i]
+      squares[i].style.display = "block"
+    } else {
+      squares[i].style.display = "none"
+    }
   }
+
   topMenu.style.backgroundColor = '#232323'
   resetButton.textContent = 'New Colors'
   messageDisplay.textContent = ''
-})
+}
 
 for (var i = 0; i < squares.length; i++) {
   // colors changer
