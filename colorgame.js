@@ -1,8 +1,7 @@
-var nbrOfSquares = 6
+var numberOfSquares = 6
 var colors
 var pickedColor
-
-//selectors
+// selectors
 var squares = document.querySelectorAll('.square')
 var colorDesplay = document.getElementById('colorDisplay')
 var messageDisplay = document.querySelector('#message')
@@ -12,23 +11,22 @@ var modeButtons = document.querySelectorAll('.mode')
 
 init()
 
-function init(){
+function init () {
   // mode buttons listeners
   for (var i = 0; i < modeButtons.length; i++) {
     modeButtons[i].addEventListener('click', function () {
       modeButtons[0].classList.remove('selected')
       modeButtons[1].classList.remove('selected')
       this.classList.add('selected')
-      this.textContent === 'Easy' ? nbrOfSquares = 3: nbrOfSquares = 6
+      this.textContent === 'Easy' ? numberOfSquares = 3 : numberOfSquares = 6
       reseter()
     })
   }
-
-  //reset button listener
+  // reset button listener
   resetButton.addEventListener('click', reseter)
-  //reset 
+  // reset
   reseter()
-  //color squares listeners and adds colors
+  // color squares listeners and adds colors
   setupsSquares()
 }
 
@@ -52,7 +50,6 @@ function randomRGBNumber () {
   return Math.floor(Math.random() * 256)
 }
 
-
 function changeColor (color) {
   // change squares colors
   for (var i = 0; i < squares.length; i++) {
@@ -71,7 +68,7 @@ function randomSquare () {
 }
 
 function reseter () {
-  colors = generateRandomColors(nbrOfSquares)
+  colors = generateRandomColors(numberOfSquares)
   pickedColor = pickColor()
   for (var i = 0; i < squares.length; i++) {
     if (colors[i]) {
@@ -86,9 +83,8 @@ function reseter () {
   messageDisplay.textContent = ''
 }
 
-function setupsSquares(){
-  
-    for (var i = 0; i < squares.length; i++) {
+function setupsSquares () {
+  for (var i = 0; i < squares.length; i++) {
     // colors changer
     squares[i].style.backgroundColor = colors[i]
     // alert
