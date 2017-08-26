@@ -51,14 +51,14 @@ for (var i = 0; i < squares.length; i++) {
     var clickedColor = this.style.backgroundColor
     // check if you win
     if (clickedColor === pickedColor) {
-      messageDisplay.textContent = 'correct'
+      messageDisplay.textContent = 'Correct!'
       changeColor(clickedColor)
-      resetButton.textContent = 'Play Agnain'
+      resetButton.textContent = 'Play Again'
       // change h1 color
       topMenu.style.backgroundColor = pickedColor
     } else {
       this.style.backgroundColor = '#232323'
-      messageDisplay.textContent = 'try next color'
+      messageDisplay.textContent = 'Try next color'
     }
   })
 }

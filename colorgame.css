@@ -6,17 +6,21 @@ body {
 
 h1{
   text-align: center;
+  line-height: 1.1;
   color: white;
   background-color: steelblue;
   margin: 0;
   font-weight: normal;
   text-transform: uppercase;
+  padding: 20px 0;
+  transition: background 0.4s;
+  -webkit-transition: background 0.4s;
+  -moz-transition: background 0.4s;
 }
 
 #midMenu{
   text-align: center;
   color: white;
-
 }
 
 #colorDisplay {
@@ -28,10 +32,16 @@ h1{
   padding-bottom: 30%;
   float: left;
   margin: 1.66%;
+  border-radius: 15%;
+  transition: background 0.4s;
 }
 
+#message {
+  display: inline-block;
+  width: 20%;
+}
 #container {
-  margin: 0 auto;
+  margin: 20px auto;
   max-width: 600px;
 }
 
@@ -43,5 +53,23 @@ h1{
 }
 
 .selected {
-  background: blue;
+  background: steelblue;
+  color: white;
+}
+
+button{
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  height: 100%;
+  font-weight: 700;
+  color: steelblue;
+  letter-spacing: 1px;
+  font-size: inherit;
+  transition: all 0.2s;
+}
+
+button:hover {
+  color: white;
+  background: steelblue;
 }
