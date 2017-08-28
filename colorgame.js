@@ -53,7 +53,7 @@ function randomRGBNumber () {
 function changeColor (color) {
   // change squares colors
   for (var i = 0; i < squares.length; i++) {
-    squares[i].style.backgroundColor = color
+    squares[i].style.background = color
   }
 }
 
@@ -73,12 +73,12 @@ function reseter () {
   for (var i = 0; i < squares.length; i++) {
     if (colors[i]) {
       squares[i].style.display = 'block'
-      squares[i].style.backgroundColor = colors[i]
+      squares[i].style.background = colors[i]
     } else {
       squares[i].style.display = 'none'
     }
   }
-  topMenu.style.backgroundColor = 'steelblue'
+  topMenu.style.background = 'steelblue'
   resetButton.textContent = 'New Colors'
   messageDisplay.textContent = ''
 }
@@ -86,19 +86,19 @@ function reseter () {
 function setupsSquares () {
   for (var i = 0; i < squares.length; i++) {
     // colors changer
-    squares[i].style.backgroundColor = colors[i]
+    squares[i].style.background = colors[i]
     // alert
     squares[i].addEventListener('click', function () {
-      var clickedColor = this.style.backgroundColor
+      var clickedColor = this.style.background
       // check if you win
       if (clickedColor === pickedColor) {
         messageDisplay.textContent = 'Correct!'
         changeColor(clickedColor)
         resetButton.textContent = 'Play Again'
         // change h1 color
-        topMenu.style.backgroundColor = pickedColor
+        topMenu.style.background = pickedColor
       } else {
-        this.style.backgroundColor = '#232323'
+        this.style.background = '#232323'
         messageDisplay.textContent = 'Try next color'
       }
     })
